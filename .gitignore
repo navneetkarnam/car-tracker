@@ -1,0 +1,7 @@
+api/target
+api/pom.xml
+api/api.iml
+.DS_Store
+api/*.class
+api/*.settings
+api/.idea
