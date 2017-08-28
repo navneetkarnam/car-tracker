@@ -29,7 +29,7 @@ public class JPAConfig {
 
         Properties properties = new Properties();
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL57Dialect");
-        properties.put("hibernate.hbm2ddl.auto","create");
+        properties.put("hibernate.hbm2ddl.auto","validate");
         properties.put("hibernate.show_sql","true");
         properties.put("hibernate.format_sql","true");
         emf2.setJpaProperties(properties);
