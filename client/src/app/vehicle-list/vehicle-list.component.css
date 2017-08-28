@@ -1,0 +1,28 @@
+h1{
+  text-align: center;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4);
+
+}
+
+
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+th{
+  text-align: center;
+  border-left: .5px solid lightgray;
+  border-right: .5px solid lightgray;
+}
+
+td{
+  text-align: center;
+  border-left: .5px solid lightgray;
+  border-right: .5px solid lightgray;
+}
+
+table{
+  border:1px solid lightgray;
+}

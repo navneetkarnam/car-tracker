@@ -1,0 +1,36 @@
+<div class="container">
+  <br/>
+  <h1>
+    Alerts
+  </h1>
+  <hr class="style-two">
+  <br/>
+  <a [routerLink]="['/vehicles']"><button class="btn btn-primary btn-md">Back</button></a>
+  <br/>
+  <br/>
+  <h5>The Number of High Alerts for this vehicle: <span class="alert">{{highNumber}}</span></h5>
+  <div>
+    <br/>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Time Stamp</th>
+        <th>Cause</th>
+        <th>Priority</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let alert of alerts">
+        <td>{{alert.timestamp | date: "short"}}</td>
+        <td>{{alert.cause}}</td>
+        <td>
+          <p *ngIf="alert.priority === 'HIGH'; then redalert else normal"></p>
+          <ng-template #redalert ><p class="redalert">{{alert.priority}} {{count()}}</p></ng-template>
+          <ng-template #normal ><p class="normal">{{alert.priority}}</p></ng-template>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

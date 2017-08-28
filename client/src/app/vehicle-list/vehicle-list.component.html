@@ -1,0 +1,37 @@
+<div class="container">
+  <br/>
+  <h1>
+    Vehicles
+  </h1>
+  <hr class="style-two">
+  <br/>
+  <a [routerLink]="['/home']"><button class="btn btn-primary btn-md">Back</button></a>
+  <div>
+    <br/>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Vin</th>
+        <th>Year</th>
+        <th>Max Fuel</th>
+        <th>Max RPM</th>
+        <th>Last Service</th>
+        <th colspan="2">More..</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let vehicle of vehicles">
+        <td>{{vehicle.make}} {{vehicle.model}}</td>
+        <td>{{vehicle.vin}}</td>
+        <td>{{vehicle.year}}</td>
+        <td>{{vehicle.maxFuelVolume}}</td>
+        <td>{{vehicle.redlineRpm}}</td>
+        <td>{{vehicle.lastServiceDate | date: "short"}}</td>
+        <td><a [routerLink] = "['/readings',vehicle.vin]"><button class="btn btn-warning btn-sm">Readings</button></a></td>
+        <td><a [routerLink] = "['/alerts', vehicle.vin]"><button class="btn btn-danger btn-sm">Alerts</button></a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
